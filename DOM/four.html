@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM|edit & remove</title>
+</head>
+<body style="background-color: #212121 ;color: #fff;">
+    <ul class="language">
+        <li>javascipt </li>
+    </ul>
+    
+</body>
+<script>
+
+
+    function addLang(langName){
+        const li=document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang("java")
+    addLang("html")
+    
+    // optimised way 
+    function add_optimised_lang(langName)
+    {
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    add_optimised_lang("typescript")
+    add_optimised_lang("react")
+
+    //edit
+
+    const secondlang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')
+    newli.textContent="Ruby"
+    secondlang.replaceWith(newli)
+
+    // 2nd method
+    const first_lang=document.querySelector("li:first-child")
+    first_lang.outerHTML='<li>Devops</li>'
+
+    //remove
+    const first_lang2=document.querySelector('li:first-child')
+    first_lang2.remove() 
+    
+</script>
+</html>

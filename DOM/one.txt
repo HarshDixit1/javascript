@@ -1,0 +1,13 @@
+// for content -> we have : innerHTML,innerText and textContent 
+// all above give ->DOM learning on js tutorials
+
+// diff btw innerText and textContent
+ <h1 id ="title" class="heading">DOM learning on js tutorials <span style="display: none;"> easy course</span></h1>
+
+innerText -> print only  DOM learning on js tutorials 
+textContent ->DOM learning on js tutorials easy course
+
+querySelector -> for title use '.title' as parameter
+but for heading '#heading'
+
+//Note-> HtmlCollection[getElementByName] and NodeList[querySelectorAll] are not pure array

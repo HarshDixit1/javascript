@@ -1,0 +1,48 @@
+ <!-- How to create a new element in DOM  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM |js tutorials</title>
+</head>
+<body style="background-color: rgb(218, 221, 221);color: rgb(144, 189, 9);">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thrusday</div>
+    </div>    
+</body>
+
+<script>
+    const parent= document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children); // give HtmlCollection
+
+    // console.log(parent.children[0].innerHTML);
+    for (let i = 0; i < parent.children.length; i++) {
+        const element = parent.children[i];
+        // console.log(element.innerHTML);
+        
+    }
+    parent.children[1].style.color="orange"     
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const dayone = document.querySelector('.day')
+    // console.log(dayone);
+    // console.log(dayone.firstChild);
+    // console.log(dayone.firstElementChild);
+    // console.log(dayone.parentElement);
+    // console.log(dayone.nextElementSibling);
+
+    //Nodelist
+    console.log("NODES: ",parent.childNodes);
+
+// we notice every element basically a NodeList
+
+</script>
+</html>
